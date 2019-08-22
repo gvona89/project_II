@@ -1,0 +1,18 @@
+{{!-- <form method="POST" action="/pantry/{{pantry._id}}?_method=DELETE">
+    <input type="submit" value="Delete pantry" />
+</form> --}}
+{{!-- <a href="pantry/editpantryForm">Edit</a> --}}
+
+<h1>Pantry</h1>
+{{!-- changed to from new to new<name> --}}
+<a href="/pantry/newgrain">Grain</a>
+<a href="/pantry/newgreen">Green</a>
+<a href="/pantry/newprotein">Protein</a>
+<ul>
+    {{#each allpantry}}
+    <li>
+    <a href="/pantry/{{_id}}/edit">Problem {{name}}</a>
+    </li>
+    
+    {{/each}}
+</ul>

@@ -1,0 +1,10 @@
+<form method="POST" action="/pantry/{{pantry._id}}?_method=PUT">
+    <label for="name">name</label>
+    <input type="text" name="name" value="{{pantry.name}}"/>
+
+    <input type="submit" value="Update pantry" />
+</form>
+
+<form method="POST" action="/pantry/{{pantry._id}}?_method=DELETE">
+    <input type="submit" value="Delete pantry" />
+</form>
