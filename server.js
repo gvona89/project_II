@@ -18,6 +18,8 @@ const methodOverride = require('method-override')
  *
  */
 const { pantryRouter } = require('./controllers/pantry.js')
+const { grainRouter } = require('./controllers/grain.js')
+
 
 
 /* Step 3
@@ -63,6 +65,7 @@ app.set('view engine', 'hbs')
  * the paths defined in the router.
  */
 app.use('/pantry', pantryRouter)
+app.use('/grain', grainRouter)
 
 
 /* Step 5

@@ -48,7 +48,7 @@ grainRouter.get('/:grainId/edit', function (req, res) {
   grainApi.getGrain(req.params.grainId)
     .then(grain => {
       // console.log(grain)
-      res.render('pantry/editGrain', { grain: grain })
+      res.render('grain/editGrain', { grain: grain })
     })
 
 })
@@ -59,8 +59,8 @@ grainRouter.post('/', function (req, res) {
 
   grainApi.addNewGrain(newGrain)
     .then(() => {
-      res.render('pantry/grain', {});
-      // res.redirect('/pantry')
+      // res.render('pantry/grain', {grain : grain});
+      res.redirect('/grain')
       // res.send(grainApi.getAllGrain())
     })
     .catch((error) => {
