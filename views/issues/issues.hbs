@@ -1,0 +1,15 @@
+<form method="POST" action="/issues/{{issue._id}}?_method=DELETE">
+    <input type="submit" value="Delete Issue" />
+</form>
+<a href="issues/editIssueForm">Edit</a>
+
+<h1>All issues</h1>
+<a href="/issues/new">New issue</a>
+<ul>
+    {{#each allissues}}
+    <li>
+    <a href="/issues/{{_id}}/edit">Problem {{name}}</a>
+    </li>
+    
+    {{/each}}
+</ul>
