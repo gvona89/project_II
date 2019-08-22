@@ -17,7 +17,6 @@ const express = require('express')
  * 
  */
 const pantryApi = require('../models/pantry.js')
-const grainApi = require('../models/grain.js')
 
 /* Step 3 
  * 
@@ -36,11 +35,8 @@ const pantryRouter = express.Router()
 pantryRouter.get('/', function (req, res) {
   pantryApi.getAllpantry()
     .then(pantry => {
-      grainApi.getGrainByPantryId(pantry._id).then(grainInPantry => 
-      
-        // console.log(pantry)
-        res.render('pantry/pantry', { allpantry: pantry })
-      })    
+      // console.log(pantry)
+      res.render('pantry/pantry', { allpantry: pantry })
     })
 })
 
@@ -54,11 +50,23 @@ pantryRouter.get('/:pantryId/edit', function (req, res) {
       // console.log(pantry)
       res.render('pantry/editpantryForm', { pantry: pantry })
     })
- 
+  // const pantryId = req.params.pantryId
+  // console.log(pantryId)
+  // pantryApi.findById(pantryId)
+  // .then((pantry)=>{
+  //   res.render("pantry/edit", {
+  //     pantry: pantry
+  //   })
+  // })
 })
 
 pantryRouter.post('/', function (req, res) {
-  
+  // console.log('req.body', req.body)
+  // pantryApi.addNewpantry(req.body)
+  //   .then(() => {
+  //   res.redirect('/pantry')
+  //   // res.send('pantry created');
+  //   })
   const newpantry = req.body
 
   pantryApi.addNewpantry(newpantry)

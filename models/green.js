@@ -5,22 +5,13 @@
 const mongoose = require('./connection.js')
 
 const pantrySchema = mongoose.Schema({
-  name: String,
-  description: String,
-  createdAt: Date,
-  status: String,
-  priority: String
+  name: String
+
 });
 
 const pantryCollection = mongoose.model('pantry', pantrySchema);
 
-// function createpantry() {
-//   return {
-//     name: "",
-//     employees: 0,
-//     currentlyOpen: false
-//   };
-// }
+
 
 function getAllpantry() {
   return pantryCollection.find();

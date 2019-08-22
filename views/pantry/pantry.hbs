@@ -5,13 +5,22 @@
 
 <h1>Pantry</h1>
 {{!-- changed to from new to new<name> --}}
-<a href="/pantry/newgrain">Grain</a>
-<a href="/pantry/newgreen">Green</a>
-<a href="/pantry/newprotein">Protein</a>
+<a href="/grain/new">Grain</a>
+<ul>
+    {{#each grain}}
+<li>
+    <a href="/newGrain/{{_id}}">
+    {{name}}
+    </a>
+</li>
+{{/each}}
+</ul>
+<a href="/pantry/newGreen">Green</a>
+<a href="/pantry/newProtein">Protein</a>
 <ul>
     {{#each allpantry}}
     <li>
-    <a href="/pantry/{{_id}}/edit">Problem {{name}}</a>
+    <a href="/pantry/{{_id}}/edit">Item {{name}}</a>
     </li>
     
     {{/each}}
