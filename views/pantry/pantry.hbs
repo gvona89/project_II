@@ -6,17 +6,8 @@
 <h1>Pantry</h1>
 {{!-- changed to from new to new<name> --}}
 <a href="/grain/new">Grain</a>
-<ul>
-    {{#each grain}}
-<li>
-    <a href="/newGrain/{{_id}}">
-    {{name}}
-    </a>
-</li>
-{{/each}}
-</ul>
-<a href="/pantry/newGreen">Green</a>
-<a href="/pantry/newProtein">Protein</a>
+<a href="/green/new">Green</a>
+<a href="/protein/new">Protein</a>
 <ul>
     {{#each allpantry}}
     <li>

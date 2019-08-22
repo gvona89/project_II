@@ -5,7 +5,7 @@
 const mongoose = require('./connection.js')
 
 const grainSchema = mongoose.Schema({
-  name: String
+  grain: String
  
 });
 

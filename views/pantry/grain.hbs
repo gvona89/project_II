@@ -1,0 +1,25 @@
+<h1>Grain</h1>
+<form method="POST" action="/grain">
+    
+    <input type="text" name="grain"/>
+
+    <input type="submit" value="Add" />
+
+<form method="POST" action="/grain/{{grain._id}}?_method=PUT">
+    <input type="submit" value="Update" />
+</form>
+<form method="POST" action="/grain/{{grain._id}}?_method=DELETE">
+    <input type="submit" value="Delete" />
+</form>
+
+
+    <ul>
+    {{#each grain}}
+    <li>
+        <a href="/grain/{{_id}}">
+        {{grain}}
+        </a>
+    </li>
+    {{/each}}
+    </ul>
+</form>

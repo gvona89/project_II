@@ -36,11 +36,11 @@ const pantryRouter = express.Router()
 pantryRouter.get('/', function (req, res) {
   pantryApi.getAllpantry()
     .then(pantry => {
-      grainApi.getGrainByPantryId(pantry._id).then(grainInPantry => 
+      
       
         // console.log(pantry)
         res.render('pantry/pantry', { allpantry: pantry })
-      })    
+  
     })
 })
 
