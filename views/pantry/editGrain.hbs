@@ -1,0 +1,9 @@
+<form method="POST" action="/grain/{{grain._id}}?_method=PUT">
+    <input type="text" name="name" value="{{grain.name}}"/>
+
+    <input type="submit" value="Update issue" />
+</form>
+
+<form method="POST" action="/grain/{{grain._id}}?_method=DELETE">
+    <input type="submit" value="Delete" />
+</form>

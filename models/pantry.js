@@ -22,23 +22,23 @@ const pantryCollection = mongoose.model('pantry', pantrySchema);
 //   };
 // }
 
-function getAllpantry() {
+function getAllPantry() {
   return pantryCollection.find();
 }
 
-function getpantry(pantryId) {
+function getPantry(pantryId) {
   return pantryCollection.findById(pantryId);
 }
 
-function addNewpantry(newpantry) {
-  return pantryCollection.create(newpantry);
+function addNewPantry(newPantry) {
+  return pantryCollection.create(newPantry);
 }
 
-function updatepantry(pantryId, updatedpantry) {
+function updatePantry(pantryId, updatedPantry) {
   return pantryCollection.updateOne({_id: pantryId}, updatedpantry);
 }
 
-function deletepantry(pantryId) {
+function deletePantry(pantryId) {
   return pantryCollection.deleteOne({_id: pantryId});
 }
 
@@ -48,10 +48,10 @@ function deletepantry(pantryId) {
  * object
  */
 module.exports = {
-  addNewpantry,
+  addNewPantry,
   // createpantry,
-  deletepantry,
-  getpantry,
-  getAllpantry,
-  updatepantry
+  deletePantry,
+  getPantry,
+  getAllPantry,
+  updatePantry
 };

@@ -34,34 +34,30 @@ const pantryRouter = express.Router()
  * 
  */
 pantryRouter.get('/', function (req, res) {
-  pantryApi.getAllpantry()
+  pantryApi.getAllPantry()
     .then(pantry => {
-      
-      
-        // console.log(pantry)
         res.render('pantry/pantry', { allpantry: pantry })
   
     })
 })
 
 pantryRouter.get('/new', function (req, res) {
-  res.render('pantry/newpantryForm', {});
+  res.render('pantry/newPantryForm', {});
 })
 
 pantryRouter.get('/:pantryId/edit', function (req, res) {
-  pantryApi.getpantry(req.params.pantryId)
+  pantryApi.getPantry(req.params.pantryId)
     .then(pantry => {
       // console.log(pantry)
-      res.render('pantry/editpantryForm', { pantry: pantry })
+      res.render('pantry/editPantryForm', { pantry: pantry })
     })
  
 })
 
 pantryRouter.post('/', function (req, res) {
   
-  const newpantry = req.body
-
-  pantryApi.addNewpantry(newpantry)
+  const newPantry = req.body
+  pantryApi.addNewPantry(newPantry)
     .then(() => {
       res.redirect('/pantry')
     })
@@ -70,17 +66,15 @@ pantryRouter.post('/', function (req, res) {
     })
 })
 
-// pantryRouter.put('/', function(req,res){
 pantryRouter.put('/:pantryId', function (req, res) {
-  pantryApi.updatepantry(req.params.pantryId, req.body)
+  pantryApi.updatePantry(req.params.pantryId, req.body)
     .then(() => {
-      // res.send('updated');
       res.redirect('/pantry');
     })
 })
 
 pantryRouter.delete('/:pantryId', function (req, res) {
-  pantryApi.deletepantry(req.params.pantryId)
+  pantryApi.deletePantry(req.params.pantryId)
     .then(() => {
       res.send('pantry deleted');
       // res.redirect('/pantry');

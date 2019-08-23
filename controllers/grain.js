@@ -16,16 +16,17 @@ const express = require('express')
  * controller you need.
  * 
  */
-const grainApi = require('../models/grain.js')
 const pantryApi = require('../models/pantry.js')
+const grainApi = require('../models/grain.js')
+// const pantryApi = require('../models/pantry.js')
 
 /* Step 3 
  * 
  * Create a new router.
  *
  * the router will "contain" all the request handlers that you define in this file.
- * TODO: rename this from pantryRouter to something that makes sense. (e.g:
- * `pantryRouter`)
+ * TODO: rename this from grainRouter to something that makes sense. (e.g:
+ * `grainRouter`)
  */
 const grainRouter = express.Router()
 
@@ -36,19 +37,17 @@ const grainRouter = express.Router()
 grainRouter.get('/', function (req, res) {
   grainApi.getAllGrain()
     .then(grain => {
-      // console.log(pantry)
        res.render('pantry/newGrain', { allgrain: grain })
     })
 })
 
-grainRouter.get('/new', function (req, res) {
-  res.render('pantry/grain', {});
+grainRouter.get('/grain', function (req, res) {
+  res.render('pantry/newGrain', {});
 })
 
 grainRouter.get('/:grainId/edit', function (req, res) {
   grainApi.getGrain(req.params.grainId)
     .then(grain => {
-      // console.log(grain)
       res.render('grain/editGrain', { grain: grain })
     })
 })
@@ -57,9 +56,7 @@ grainRouter.post('/grain', function (req, res) {
   const newGrain = req.body
   grainApi.addNewGrain(newGrain)
     .then(() => {
-      // res.render('pantry/grain', {grain : grain});
-      res.redirect('/grain')
-      // res.send(grainApi.getAllGrain())
+      res.redirect('/pantry')
     })
     .catch((error) => {
       res.send(error)
@@ -77,7 +74,6 @@ grainRouter.delete('/:grainId', function (req, res) {
   grainApi.deleteGrain(req.params.grainId)
     .then(() => {
       res.send('grain deleted');
-      // res.redirect('/pantry');
     })
 })
 

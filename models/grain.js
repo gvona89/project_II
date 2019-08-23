@@ -43,7 +43,6 @@ function deleteGrain(grainId) {
  */
 module.exports = {
   addNewGrain,
-  // createpantry,
   deleteGrain,
   getGrain,
   getAllGrain,
