@@ -50,13 +50,10 @@ grainRouter.get('/:grainId/edit', function (req, res) {
       // console.log(grain)
       res.render('grain/editGrain', { grain: grain })
     })
-
 })
 
-grainRouter.post('/', function (req, res) {
-
+grainRouter.post('/grain', function (req, res) {
   const newGrain = req.body
-
   grainApi.addNewGrain(newGrain)
     .then(() => {
       // res.render('pantry/grain', {grain : grain});
