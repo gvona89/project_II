@@ -55,9 +55,9 @@ pantryRouter.get('/:pantryId/edit', function (req, res) {
 })
 
 pantryRouter.post('/', function (req, res) {
-  
-  const newPantry = req.body
-  pantryApi.addNewPantry(newPantry)
+
+  // const newPantry = req.body
+  pantryApi.addNewPantry(req.body)
     .then(() => {
       res.redirect('/pantry')
     })
