@@ -1,0 +1,10 @@
+<h1>Grains</h1>
+<a href="/grain/new">New grain</a>
+<ul>
+    {{#each allgrain}}
+    <li>
+    <a href="/grain/{{_id}}/edit">{{name}}</a>
+    </li>
+    
+    {{/each}}
+</ul>

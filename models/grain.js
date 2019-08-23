@@ -1,12 +1,11 @@
 /* 
- * Place all functions, classes, and/or DB Schemas here for a single 
+ * Place all functions, classes, and/or DB schemas here for a single 
  * model.
  */
 const mongoose = require('./connection.js')
 
 const grainSchema = mongoose.Schema({
-  grain: String
- 
+  name: String
 });
 
 const grainCollection = mongoose.model('grain', grainSchema);
@@ -16,16 +15,12 @@ function getAllGrain() {
   return grainCollection.find();
 }
 
-function getGrain(grainId) {
+function getGrain(GrainId) {
   return grainCollection.findById(grainId);
 }
 
 function addNewGrain(newGrain) {
-  return grainCollection.create(newGrain);
-}
-
-function getGrainByPantryId(pantryId) {
-  return grainCollection.findById(pantryId);
+  return grainCollection.create(addNewGrain);
 }
 
 function updateGrain(grainId, updatedGrain) {
@@ -46,6 +41,5 @@ module.exports = {
   deleteGrain,
   getGrain,
   getAllGrain,
-  updateGrain,
-  getGrainByPantryId
+  updateGrain
 };
