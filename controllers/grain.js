@@ -17,6 +17,7 @@ const express = require('express')
  * 
  */
 const grainApi = require('../models/grain.js')
+const pantryApi = require('../models/pantry.js')
 
 /* Step 3 
  * 
