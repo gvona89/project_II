@@ -36,12 +36,13 @@ grainRouter.get('/', function (req, res) {
   grainApi.getAllGrain()
     .then(grain => {
       // console.log(pantry)
-      //  res.render('pantry/newGrain', { allgrain: grain })
+       res.render('pantry/newGrain', { allgrain: grain })
     })
 })
 
 grainRouter.get('/new', function (req, res) {
-  res.render('pantry/grain', {});
+  res.render('grain/newGrain', {});
+  // res.render('pantry/grain', {});
 })
 
 grainRouter.get('/:grainId/edit', function (req, res) {
