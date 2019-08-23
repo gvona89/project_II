@@ -41,8 +41,7 @@ grainRouter.get('/', function (req, res) {
 })
 
 grainRouter.get('/new', function (req, res) {
-  res.render('grain/newGrain', {});
-  // res.render('pantry/grain', {});
+  res.render('pantry/grain', {});
 })
 
 grainRouter.get('/:grainId/edit', function (req, res) {
