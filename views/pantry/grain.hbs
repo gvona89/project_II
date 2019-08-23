@@ -1,22 +1,10 @@
 <h1>Grain</h1>
-<form method="POST" action="/grain">
-    
-    <input type="text" name="grain"/>
-
-    <input type="submit" value="Add" />
-
-<form method="POST" action="/grain/{{grain._id}}?_method=PUT">
-    <input type="submit" value="Update" />
-</form>
-<form method="POST" action="/grain/{{grain._id}}?_method=DELETE">
-    <input type="submit" value="Delete" />
-</form>
-
+<a href="grain/new">Add</a>
 
     <ul>
     {{#each grain}}
     <li>
-        <a href="/grain/{{_id}}">
+        <a href="/grain/{{_id}}/edit">
         {{grain}}
         </a>
     </li>
