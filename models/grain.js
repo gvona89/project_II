@@ -15,12 +15,12 @@ function getAllGrain() {
   return grainCollection.find();
 }
 
-function getGrain(GrainId) {
+function getGrain(grainId) {
   return grainCollection.findById(grainId);
 }
 
 function addNewGrain(newGrain) {
-  return grainCollection.create(addNewGrain);
+  return grainCollection.create(newGrain);
 }
 
 function updateGrain(grainId, updatedGrain) {

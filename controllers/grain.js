@@ -46,7 +46,7 @@ grainRouter.get('/new', function (req, res) {
 
 grainRouter.get('/:grainId/edit', function (req, res) {
   grainApi.getGrain(req.params.grainId)
-    .then(issue => {
+    .then(grain => {
       // console.log(issues)
       res.render('grain/editGrain', { grain: grain })
     })
@@ -75,8 +75,8 @@ grainRouter.put('/:grainId', function (req, res) {
 grainRouter.delete('/:grainId', function (req, res) {
   grainApi.deleteGrain(req.params.grainId)
     .then(() => {
-      res.send('grain deleted');
-      // res.redirect('/issue');
+      // res.send('grain deleted');
+      res.redirect('/grain');
     })
 })
 
