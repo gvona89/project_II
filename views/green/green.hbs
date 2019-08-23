@@ -1,0 +1,10 @@
+<h1>Greens</h1>
+<a href="/green/new">New green</a>
+<ul>
+    {{#each allgreen}}
+    <li>
+    <a href="/green/{{_id}}/edit">{{name}}</a>
+    </li>
+    
+    {{/each}}
+</ul>

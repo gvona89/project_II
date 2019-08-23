@@ -1,0 +1,10 @@
+<h1>Protein</h1>
+<a href="/protein/new">New Protein</a>
+<ul>
+    {{#each allprotein}}
+    <li>
+    <a href="/protein/{{_id}}/edit">{{name}}</a>
+    </li>
+    
+    {{/each}}
+</ul>

@@ -1,0 +1,10 @@
+<form method="POST" action="/protein/{{protein._id}}?_method=PUT">
+    <label for="name">name</label>
+    <input type="text" name="name" value="{{protein.name}}"/>
+
+    <input type="submit" value="Update protein" />
+</form>
+
+<form method="POST" action="/protein/{{protein._id}}?_method=DELETE">
+    <input type="submit" value="Delete protein" />
+</form>

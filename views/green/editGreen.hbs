@@ -1,0 +1,10 @@
+<form method="POST" action="/green/{{green._id}}?_method=PUT">
+    <label for="name">name</label>
+    <input type="text" name="name" value="{{green.name}}"/>
+
+    <input type="submit" value="Update green" />
+</form>
+
+<form method="POST" action="/green/{{green._id}}?_method=DELETE">
+    <input type="submit" value="Delete green" />
+</form>

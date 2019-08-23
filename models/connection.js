@@ -9,7 +9,9 @@ const mongoose = require('mongoose');
  * This will need to change for every new project you create.
  *
  */
+
 const connectionString = "mongodb://localhost/grain";
+// const connectionString = "mongodb://localhost/green";
 
 
 /* Open up a connection to the mongo database.
