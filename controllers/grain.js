@@ -52,7 +52,7 @@ grainRouter.get('/:grainId/edit', function (req, res) {
     })
 })
 
-grainRouter.post('/grain', function (req, res) {
+grainRouter.post('/pantry', function (req, res) {
   const newGrain = req.body
   grainApi.addNewGrain(newGrain)
     .then(() => {

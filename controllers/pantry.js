@@ -18,6 +18,8 @@ const express = require('express')
  */
 const pantryApi = require('../models/pantry.js')
 const grainApi = require('../models/grain.js')
+const greenApi = require('../models/green.js')
+const proteinnApi = require('../models/protein.js')
 
 /* Step 3 
  * 
@@ -34,10 +36,12 @@ const pantryRouter = express.Router()
  * 
  */
 pantryRouter.get('/', function (req, res) {
-  pantryApi.getAllPantry()
-    .then(pantry => {
-        res.render('pantry/pantry', { allpantry: pantry })
-  
+  grainApi.getAllGrain().then(allGrain => {
+  // grainApi.getAllGreen().then(allGreen => {
+  // grainApi.getAllProtein().then(allProtein => {
+        res.render('pantry/pantry', { allGrain })
+        res.render('pantry/pantry', { allGreen })
+        res.render('pantry/pantry', { allProtein })
     })
 })
 
