@@ -17,9 +17,9 @@ const methodOverride = require('method-override')
  * import routers from controllers/
  *
  */
-const { pantryRouter } = require('./controllers/pantry.js')
 const { grainRouter } = require('./controllers/grain.js')
-
+const { greenRouter } = require('./controllers/green.js')
+const { proteinRouter } = require('./controllers/protein.js')
 
 
 /* Step 3
@@ -64,8 +64,9 @@ app.set('view engine', 'hbs')
  * add router for the application to use. The first argument is a prefix to all
  * the paths defined in the router.
  */
-app.use('/pantry', pantryRouter)
 app.use('/grain', grainRouter)
+app.use('/green', greenRouter)
+app.use('/protein', proteinRouter)
 
 
 /* Step 5
