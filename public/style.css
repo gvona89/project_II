@@ -1,11 +1,21 @@
+/* image styled for all pages */
 .block{
     position: absolute;
     z-index: -1;
-    margin-top: -5px;
+    margin-top: -55px;
+    
 }
+
+ul{
+    list-style: none;
+}
+
+/* home page */
+
 .pantry{
     color: white;
     font-size: 5em;
+    
     text-align: center;
     text-shadow: 3px 3px black;
 }
@@ -41,4 +51,16 @@ a{
 }
 .graina:hover{
     color: saddlebrown;
+}
+
+/* grain page */
+
+.grainy{
+    
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    text-shadow: 2px 2px black;
+    margin-left: 50%;
+    
 }
