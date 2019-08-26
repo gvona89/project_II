@@ -61,6 +61,15 @@ a{
     color: white;
     font-size: 2em;
     text-shadow: 2px 2px black;
-    margin-left: 50%;
+    /* margin-left: 50%; */
+    
+}
+.allgreen{
+    
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    text-shadow: 2px 2px black;
+    /* margin-left: 50%; */
     
 }
