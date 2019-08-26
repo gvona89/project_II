@@ -1,0 +1,44 @@
+.block{
+    position: absolute;
+    z-index: -1;
+    margin-top: -5px;
+}
+.pantry{
+    color: white;
+    font-size: 5em;
+    text-align: center;
+    text-shadow: 3px 3px black;
+}
+
+.buttons{
+    text-align: center;
+    
+    border-radius: 50%;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    font-size: 2em;
+    
+}
+button:hover{
+    border-radius: 50%;
+}
+a{
+    color: white;
+    text-shadow: 2px 2px black;
+    background-color: transparent;
+    border-radius: 50%;
+    text-decoration: none;
+}
+.greena:hover{
+    color: green;
+}
+.proteina:hover{
+    color: red;
+}
+.graina:hover{
+    color: saddlebrown;
+}
