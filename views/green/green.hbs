@@ -1,12 +1,11 @@
 <img class="block" src="img/green2.jpeg" alt="">
 <div class="allgreen">
 <h1>Greens</h1>
-<a href="/green/new">New green</a>
-
+<a class="greenlink" href="/green/new">Add green</a>
 <ul>
     {{#each allgreen}}
     <li>
-    <a href="/green/{{_id}}/edit">{{name}}</a>
+    <a class="greentxt" href="/green/{{_id}}/edit">{{name}}</a>
     </li>
     
     {{/each}}

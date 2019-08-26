@@ -3,6 +3,8 @@
     position: absolute;
     z-index: -1;
     margin-top: -55px;
+    width: 100vw;
+    height: 100vh;
     
 }
 
@@ -14,15 +16,13 @@ ul{
 
 .pantry{
     color: white;
-    font-size: 5em;
-    
+    font-size: 5em; 
     text-align: center;
     text-shadow: 3px 3px black;
 }
 
 .buttons{
     text-align: center;
-    
     border-radius: 50%;
 }
 
@@ -36,6 +36,7 @@ button{
 button:hover{
     border-radius: 50%;
 }
+/* home anchor style */
 a{
     color: white;
     text-shadow: 2px 2px black;
@@ -54,9 +55,7 @@ a{
 }
 
 /* grain page */
-
-.grainy{
-    
+.allgrain{
     text-align: center;
     color: white;
     font-size: 2em;
@@ -64,12 +63,33 @@ a{
     /* margin-left: 50%; */
     
 }
-.allgreen{
-    
+/* update grain */
+.update{
     text-align: center;
     color: white;
-    font-size: 2em;
+}
+.newgrain{
+    text-align: center;
+    color: white;
     text-shadow: 2px 2px black;
+}
+/* green page */
+.allgreen{
+    text-align: center;
+    color: black;
+    font-size: 2em;
+    text-shadow: 2px 2px slategray;
     /* margin-left: 50%; */
     
+}
+/* a tag style */
+.greenlink{
+    color: black;
+    text-shadow: 1px 1px slategray;
+}
+/* link style */
+.greentxt{
+    color: black;
+    text-shadow: 1px 1px slategray;
+
 }
