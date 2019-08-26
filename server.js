@@ -20,6 +20,7 @@ const methodOverride = require('method-override')
 const { grainRouter } = require('./controllers/grain.js')
 const { greenRouter } = require('./controllers/green.js')
 const { proteinRouter } = require('./controllers/protein.js')
+const { pantryRouter } = require('./controllers/pantry.js')
 
 
 /* Step 3
@@ -67,7 +68,10 @@ app.set('view engine', 'hbs')
 app.use('/grain', grainRouter)
 app.use('/green', greenRouter)
 app.use('/protein', proteinRouter)
-
+app.use('/pantry', pantryRouter)
+app.get('/', (req, res) => {
+    res.redirect('/pantry')
+})
 
 /* Step 5
  *
