@@ -4,7 +4,7 @@
 
 * Keep ontop of inventory and/or engineering your very own home recipes with Pantry
 
-## Prject Board 
+## Project Board 
 * [Project Board] (https://github.com/gvona89/project_II/projects/1)
 
 ## Technology
