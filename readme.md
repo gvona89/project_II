@@ -1,8 +1,8 @@
-# Pantry
+# Pantry App
 
 ## Objectives
 
-* Keep ontop of inventory and/or engineering your very own home recipes with Pantry
+* Stay on top of inventory and/or engineering your very own home recipes with Pantry
 
 ## WireFrame
 * ![alt text](public/img/wireframe/wireframe0.jpg)
