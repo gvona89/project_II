@@ -11,4 +11,4 @@
 * Handlebars, MongoDb, Github, CSS, HTML, JavaScript, Heroku, Mongoose, Express
 
 ##Heroku 
-https://cryptic-falls-40519.herokuapp.com/pantry
+* https://cryptic-falls-40519.herokuapp.com/pantry
