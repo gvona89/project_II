@@ -10,8 +10,9 @@ const mongoose = require('mongoose');
  *
  */
 
-const connectionString = "mongodb://localhost/grain";
+// const connectionString = "mongodb://localhost/grain";
 // const connectionString = "mongodb://localhost/green";
+const connectionString = process.env.MONGODB_URI || "mongodb://localhost/pantry";
 
 
 /* Open up a connection to the mongo database.
