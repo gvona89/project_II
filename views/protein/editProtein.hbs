@@ -1,6 +1,9 @@
 <img class="block" src="/img/protein.jpeg" alt="">
 <form method="POST" action="/protein/{{protein._id}}?_method=PUT">
-    <label for="name">name</label>
+         <div class="allgrain">
+    <label for="name"></label>
+            <h1>Edit Protein</h1>
+
     <input type="text" name="name" value="{{protein.name}}"/>
 
     <input type="submit" value="Update protein" />
@@ -9,3 +12,4 @@
 <form method="POST" action="/protein/{{protein._id}}?_method=DELETE">
     <input type="submit" value="Delete protein" />
 </form>
+</div>

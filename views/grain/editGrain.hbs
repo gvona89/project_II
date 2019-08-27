@@ -1,6 +1,8 @@
 <img class="block" src="/img/grain1.jpg" alt="">
 <form method="POST" action="/grain/{{grain._id}}?_method=PUT">
     {{!-- <label for="name">name</label> --}}
+     <div class="allgrain">
+
     <div class="update">
         <h1>Edit Grains</h1>
     <input type="text" name="name" value="{{grain.name}}"/>
@@ -10,4 +12,4 @@
 <form method="POST" action="/grain/{{grain._id}}?_method=DELETE">
     <input type="submit" value="Delete grain" />
 </form>
-</div>
+</div></div>

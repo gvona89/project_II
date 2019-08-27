@@ -1,11 +1,14 @@
 <img class="block" src="/img/protein.jpeg" alt="">
+<div class="allgrain">
 <h1>Protein</h1>
-<a href="/protein/new">New Protein</a>
+<a class="link" href="/pantry">Return to Pantry</a> <br>
+<a class="link" href="/protein/new">New Protein</a>
 <ul>
     {{#each allprotein}}
     <li>
-    <a href="/protein/{{_id}}/edit">{{name}}</a>
+    <a class="link" href="/protein/{{_id}}/edit">{{name}}</a>
     </li>
     
     {{/each}}
 </ul>
+</div>

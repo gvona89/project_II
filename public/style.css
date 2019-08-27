@@ -16,11 +16,15 @@ ul{
 /* home page */
 
 .pantry{
-    color: red;
+    color: peru;
+    /* color: red; */
     font-size: 5em; 
     text-align: center;
     text-shadow: 3px 3px black;
-    
+    /* background-color: rgba(30,30,30,.5); */
+    width: 20%;
+    margin: 0 auto;
+    border-radius: 2%;
 }
 
 .buttons{
@@ -37,7 +41,7 @@ button{
     background-color: rgba(20,20,20,.7);
     width: 10%;
     margin: 0 auto;
-    border-radius: 10%;
+    border-radius: 15%;
     
 }
 /* button:hover{
@@ -63,6 +67,9 @@ a{
 }
 .proteina:hover{
     color: white;
+}
+.graina{
+    color: goldenrod;
 }
 .graina:hover{
     color: saddlebrown;
@@ -98,6 +105,10 @@ a{
     color: black;
     font-size: 2em;
     text-shadow: 1px 1px slategray;
+    background-color: rgba(196, 201, 196, 0.4);
+    width: 30%;
+    margin: 0 auto;
+    border-radius: 5%;
     /* margin-left: 50%; */
     
 }
@@ -106,9 +117,36 @@ a{
     color: black;
     text-shadow: 1px 1px slategray;
 }
+.greenlink:hover{
+    color: darkred;
+    text-shadow: 1px 1px slategray;
+}
 /* link style */
 .greentxt{
     color: black;
     text-shadow: 1px 1px slategray;
 
+}
+.greentxt:hover{
+    color: darkred;
+    text-shadow: 1px 1px slategray;
+
+}
+/* protein page */
+.home{
+    z-index: -2;
+}
+
+.txt:hover{
+    color: white;
+    text-shadow: 1px 1px black;
+
+}
+.link:hover{
+    color: slategray;
+    text-shadow: 1px 1px black;
+}
+.link1:hover{
+    color: orange;
+    text-shadow: 1px 1px black;
 }

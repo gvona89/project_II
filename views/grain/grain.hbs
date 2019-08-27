@@ -1,11 +1,13 @@
 <img class="block" src="/img/grain1.jpg" alt="">
 <div class="allgrain">
 <h1>Grains</h1>
-<a href="/grain/new">Add Grain</a>
+<a class="link1" href="/pantry">Return to Pantry</a><br>
+<a class="link1" href="/grain/new">Add Grain</a> 
+
 <ul>
     {{#each allgrain}}
     <li>
-    <a href="/grain/{{_id}}/edit">{{name}}</a>
+    <a class="link1" href="/grain/{{_id}}/edit">{{name}}</a>
     </li>
     
     {{/each}}
